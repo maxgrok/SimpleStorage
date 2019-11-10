@@ -1,5 +1,5 @@
 const path = require("path");
-const HDWalletProvder = require("truffle-hdwallet-provider");
+const HDWalletProvider = require("truffle-hdwallet-provider");
 
 const infuraURL = "https://mainnet.infura.io/v3/dbcb5a76dfc447e79201a60923e4a64c";
 const mnemonic = process.env.PRIV_SEED;
@@ -14,7 +14,7 @@ module.exports = {
       port: 7545,
       network_id: "*"
     },
-    mainnet:{
+    "mainnet":{
       provider: () => HDWalletProvider(mnemonic, infuraURL),
       network_id:"2"
     }

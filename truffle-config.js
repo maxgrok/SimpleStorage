@@ -1,8 +1,8 @@
 const HDWalletProvder = require("truffle-hdwallet-provider");
 const path = require("path");
 
-const infuraURL = " ";
-const mnemonic = " ";
+const infuraURL = "https://mainnet.infura.io/v3/dbcb5a76dfc447e79201a60923e4a64c";
+const mnemonic = process.env.PRIV_SEED;
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
@@ -14,9 +14,9 @@ module.exports = {
       port: 7545,
       network_id: "*"
     },
-    rinkeby:{
+    mainnet:{
       provider: () => HDWalletProvider(mnemonic, infuraURL),
-      network_id:"4"
+      network_id:"2"
     }
   }
 };

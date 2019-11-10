@@ -16,7 +16,7 @@ module.exports = {
     },
     "mainnet":{
       provider: () => new HDWalletProvider(mnemonic, infuraURL),
-      network_id:"2"
+      network_id: 1
     }
   }
 };

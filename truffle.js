@@ -18,7 +18,7 @@ module.exports = {
     "rinkeby":{
       provider: ()=> new HDWalletProvider(mnemonic, infuraRinkebyURL),
       network_id: 4
-    }
+    },
     "mainnet":{
       provider: () => new HDWalletProvider(mnemonic, infuraURL),
       network_id: 1
